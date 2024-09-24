@@ -1,5 +1,5 @@
-# Maven-Fuzzy-Factory---Case-Study
-As e-Commerce Database Analyst for Maven Fuzzy Factory, to optimize marketing channels and test website conversion performance
+# Maven-Fuzzy-Factory--Ecommerce-Data-Analysis
+As an E-commerce Database Analyst for Maven Fuzzy Factory, I optimized marketing channels, tested website conversion performance, and used data to understand the impact of new product launches and so on.
 
 ![image](https://user-images.githubusercontent.com/68370376/183663485-19fee3d8-737f-4d68-ba73-eb7c8876a635.png)
 
