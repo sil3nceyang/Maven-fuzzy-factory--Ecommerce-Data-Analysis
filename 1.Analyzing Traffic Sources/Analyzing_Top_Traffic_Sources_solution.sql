@@ -13,7 +13,7 @@ I'd like to see a breakdown by UTM source, campaign and referring domain if poss
 -- ASSIGNMENT: Finding Top Traffic Sources
 -- SOLUTION: Finding Top Traffic Sources
 SELECT 
-	utm_source,
+    utm_source,
     utm_campaign,
     http_referer,
     COUNT(website_session_id) as total_sessions
@@ -47,14 +47,14 @@ If we're much lower, we'll need to reduce bids. If we're higher, we can increase
 -- ASSIGNMENT: Traffic Source Conversion Rates
 -- SOLUTION: Traffic Source Conversion Rates
 SELECT
-	COUNT(DISTINCT website_sessions.website_session_id) as sessions,
+    COUNT(DISTINCT website_sessions.website_session_id) as sessions,
     COUNT(DISTINCT orders.order_id) as orders,
     COUNT(DISTINCT orders.order_id) / COUNT(DISTINCT website_sessions.website_session_id) as session_to_order_conv_rate
 FROM website_sessions
 LEFT JOIN orders
 	USING (website_session_id) 
 WHERE website_sessions.created_at < '2012-04-12'
-	AND website_sessions.utm_source = 'gsearch'
+    AND website_sessions.utm_source = 'gsearch'
     AND website_sessions.utm_campaign = 'nonbrand'
 ;
 -- FINDING: The CVR is 2.96%
