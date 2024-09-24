@@ -65,13 +65,7 @@ As an E-commerce Database Analyst for Maven Fuzzy Factory, I optimized marketing
 
 ![image](https://user-images.githubusercontent.com/68370376/183666303-a1be7a79-335f-433e-81b7-c6a84dc298c7.png)
 
-🧩 IF YOU LIKE IT !! -- Save the Repo and Hit the Follow Button 👍
 
-💬 DM open @datascience_with_dhruv : Instagram Page > https://www.instagram.com/datascience_with_dhruv/
-
-📝 Read My Interesting Data Related Blogs @ Medium > https://medium.com/@dhruv.bhatia563
-
-🙋‍♂️ Know More About Me > https://linktr.ee/datascience_with_dhruv
 
 ![Untitled design](https://user-images.githubusercontent.com/68370376/183666499-48513dca-20b9-4485-994f-27c8d11a665c.png)
 
