@@ -16,14 +16,14 @@ SELECT
     -- YEAR(created_at) AS yr,
     -- WEEK(created_at) AS wk,
     MIN(DATE(created_at))  AS week_started_at,
-	COUNT(DISTINCT website_session_id) AS sessions
+    COUNT(DISTINCT website_session_id) AS sessions
 FROM website_sessions
 WHERE created_at < '2012-05-10'
-	AND utm_source = 'gsearch'
-	AND utm_campaign = 'nonbrand'
+    AND utm_source = 'gsearch'
+    AND utm_campaign = 'nonbrand'
 GROUP BY
-	YEAR(created_at),
-	WEEK(created_at)
+    YEAR(created_at),
+    WEEK(created_at)
 ;
 -- FINDING: we were around 900 over 1000 and now we're down in the roughly 600 to 680 range for the last four weeks. It does look like there was an impact to volume.
 
@@ -53,15 +53,15 @@ Thanks, Tom
 -- ASSIGNMENT: Bid Optimization for Paid Traffic
 -- SOLUTION: Bid Optimization for Paid Traffic
 SELECT
-	website_sessions.device_type,
+    website_sessions.device_type,
     COUNT(DISTINCT website_sessions.website_session_id) as sessions,
     COUNT(DISTINCT orders.order_id) as orders,
-	COUNT(DISTINCT orders.order_id)/COUNT(DISTINCT website_sessions.website_session_id) AS conv_rt
+    COUNT(DISTINCT orders.order_id)/COUNT(DISTINCT website_sessions.website_session_id) AS conv_rt
 FROM website_sessions
 LEFT JOIN orders
-	USING (website_session_id) 
+    USING (website_session_id) 
 WHERE website_sessions.created_at < '2012-05-11'
-	AND website_sessions.utm_source = 'gsearch'
+    AND website_sessions.utm_source = 'gsearch'
     AND website_sessions.utm_campaign = 'nonbrand'
 GROUP BY 1
 ;
