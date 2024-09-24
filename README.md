@@ -15,10 +15,6 @@ As an E-commerce Database Analyst for Maven Fuzzy Factory, I optimized marketing
 
 ![image](https://user-images.githubusercontent.com/68370376/183664511-a7bd56ba-d18d-4cb1-a89e-afa1e3b8022a.png)
 
-![image](https://user-images.githubusercontent.com/68370376/183664568-fa5a0cc6-d5fc-4464-b627-636e8599218f.png)
-
-![image](https://user-images.githubusercontent.com/68370376/183664635-50090e3b-4687-4494-a3b1-8b991ff54242.png)
-
 ### Past 8 Month's Analysis Overview
 
 ![image](https://user-images.githubusercontent.com/68370376/183664832-6df3d30d-9d2d-406e-8674-5e5f13abccf4.png)
