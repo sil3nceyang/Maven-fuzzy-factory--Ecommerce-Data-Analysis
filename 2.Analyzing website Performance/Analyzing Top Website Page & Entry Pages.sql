@@ -14,14 +14,14 @@ Thanks!
 -- ASSIGNMENT: Finding Top Website Pages
 -- SOLUTION: Finding Top Website Pages
 SELECT
-	pageview_url,
-	COUNT(DISTINCT website_session_id) AS sessions
+    pageview_url,
+    COUNT(DISTINCT website_session_id) AS sessions
 FROM website_pageviews
 WHERE created_at < '2012-06-09'
 GROUP BY
-	pageview_url
+    pageview_url
 ORDER BY
-	sessions DESC
+    sessions DESC
 ;
 -- FINDING: The home page gets the vast majority of the page views during this time period, followedby the products and the original Mr Fuzzy Page.
 
@@ -54,21 +54,21 @@ Thanks!
 -- SOLUTION: Finding Top Entry Pages
 CREATE TEMPORARY TABLE first_pageviews 
 SELECT 
-	website_session_id, 
-	MIN(website_pageview_id) AS min_pageview_id
+    website_session_id, 
+    MIN(website_pageview_id) AS min_pageview_id
 FROM website_pageviews 
 WHERE created_at < '2012-06-12' 
 GROUP BY 
-	website_session_id;
+    website_session_id;
 
 SELECT 
-	website_pageviews.pageview_url AS landing_page, 
-	COUNT(first_pageviews.website_session_id) AS sessions_hitting_this_landing_page 
+    website_pageviews.pageview_url AS landing_page, 
+    COUNT(first_pageviews.website_session_id) AS sessions_hitting_this_landing_page 
 FROM first_pageviews 
-	LEFT JOIN website_pageviews 
+    LEFT JOIN website_pageviews 
         ON website_pageviews.website_pageview_id = first_pageviews.min_pageview_id 
 GROUP BY 
-	website_pageviews.pageview_url
+    website_pageviews.pageview_url
 ;
 -- FINDING: The landing page URL of the home page is getting all of the sessions at this point in the life of the business.
 
