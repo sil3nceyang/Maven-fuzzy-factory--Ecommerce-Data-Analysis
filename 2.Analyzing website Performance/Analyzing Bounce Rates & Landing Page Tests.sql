@@ -222,6 +222,7 @@ SELECT
 FROM sessions_w_counts_lander_and_created_at
 GROUP BY
 	YEARWEEK(session_created_at)
+;
 -- FINDING: The bounce rate started in the 60%. And then over time, as it switched over to traffic, primarily going to the lander, we're seeing bounce rate closer to the 50% range. So that's definitely a remarkable improvement from 60% down to 50%.
 
 /*
