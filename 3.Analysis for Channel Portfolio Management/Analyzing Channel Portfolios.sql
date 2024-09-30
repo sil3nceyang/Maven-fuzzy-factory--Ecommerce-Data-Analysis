@@ -13,7 +13,7 @@ Thanks, Tom
 -- ASSIGNMENT: Analyzing Channel Portfolios
 -- SOLUTION: Analyzing Channel Portfolios
 SELECT 
-	MIN(DATE(created_at)) AS week_start_date,
+    MIN(DATE(created_at)) AS week_start_date,
     COUNT(DISTINCT CASE WHEN utm_source ='gsearch' THEN website_session_id ELSE NULL END) AS gsearch_sessions,
     COUNT(DISTINCT CASE WHEN utm_source ='bsearch' THEN website_session_id ELSE NULL END) AS bsearch_sessions
 FROM website_sessions
@@ -46,7 +46,7 @@ Thanks, Tom
 -- ASSIGNMENT: Comparing Channel Characteristics
 -- SOLUTION: Comparing Channel Characteristics
 SELECT 
-	utm_source,
+    utm_source,
     COUNT(DISTINCT website_session_id) AS sessions,
     COUNT(DISTINCT CASE WHEN device_type ='mobile' THEN website_session_id ELSE NULL END) AS mobile_sessions,
     COUNT(DISTINCT CASE WHEN device_type ='mobile' THEN website_session_id ELSE NULL END)/COUNT(DISTINCT website_session_id) AS pct_mobile
@@ -93,18 +93,18 @@ Thanks, Tom
 -- ASSIGNMENT: Cross-Channel Bid Optimization
 -- SOLUTION: Cross-Channel Bid Optimization
 SELECT 
-	 website_sessions.device_type,
-	 website_sessions.utm_source,
+    website_sessions.device_type,
+    website_sessions.utm_source,
     COUNT(DISTINCT website_sessions.website_session_id) AS sessions,
     COUNT(DISTINCT orders.order_id) AS orders,
     COUNT(DISTINCT orders.order_id)/COUNT(DISTINCT website_sessions.website_session_id) AS conv_rate
 FROM website_sessions
 	LEFT JOIN orders
-		USING (website_session_id)
+	    USING (website_session_id)
 WHERE website_sessions.created_at BETWEEN '2012-08-22' AND '2012-09-18'
     AND utm_campaign = 'nonbrand'
 GROUP BY
-	 website_sessions.device_type,
+     website_sessions.device_type,
      website_sessions.utm_source
 ;
 -- FINDING: Within the desktop and mobile, gsearch looks like it outperforms against bsearch.
